@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Website Generator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Basic Styling -->
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>AI Website Generator</h1>
+        <p>Describe your website and let AI generate it instantly.</p>
+
+        <!-- User Input -->
+        <textarea
+            id="prompt"
+            placeholder="Example: Create a portfolio website for a photographer with gallery and contact form">
+        </textarea>
+
+        <!-- Generate Button -->
+        <button onclick="generateSite()">Generate Website</button>
+
+        <!-- 🔄 Loading Indicator (ADDED HERE) -->
+        <p id="loading" style="display:none; margin-top:10px; color:#555;">
+            ⏳ Generating website… Please wait
+        </p>
+
+        <!-- Preview Section -->
+        <h2>Live Preview</h2>
+        <iframe id="preview" title="Website Preview"></iframe>
+
+        <!-- Download Button -->
+        <button class="download-btn" onclick="downloadSite()">
+            Download Generated Website
+        </button>
+
+    </div>
+
+    <!-- JS -->
+    <script src="/static/script.js"></script>
+
+</body>
+</html>
